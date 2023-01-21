@@ -1,0 +1,21 @@
+.genres{
+    font-size:25px;
+    margin-left: 50px;
+    font-weight: bold;
+}
+
+.tvshowSection{
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.genreImgContainer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-inline-end: 0;
+}
+
+.genreImg{
+    padding:20px;
+}

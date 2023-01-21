@@ -1,6 +1,12 @@
 import Header from "./components/header";
+import TvshowPage from "./components/tvshowPage";
 const App = () => {
-  return <Header />;
+  return (
+    <>
+      <Header />
+      <TvshowPage />
+    </>
+  );
 };
 
 export default App;
