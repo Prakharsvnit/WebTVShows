@@ -5,12 +5,12 @@
     flex-direction:row;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 100px;
+    margin-bottom: 50px;
 }
 
 .tv{
     font-size:30px;
-    padding: 20px;
+    padding: 30px;
 }
 
 .form{
@@ -22,6 +22,7 @@ input[type="search"] {
     border: 1px solid #ccc;
     border-radius: 4px;
     font-size: 14px;
+    width:250px;
   }
   
 .searchBtn{
