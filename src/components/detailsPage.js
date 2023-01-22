@@ -4,7 +4,6 @@ import Summary from "./summary";
 
 const DetailsPage = () => {
   const showsDetails = useSelector((state) => state.show.showDetail[0]);
-  console.log(showsDetails);
   return (
     <>
       {showsDetails.map((detail, index) => (
