@@ -1,16 +1,22 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { configureStore, createSlice } from "@reduxjs/toolkit";
 
-export const showSlice = createSlice({
-  name: "showDetails",
+// create our slice
+const showSlice = createSlice({
+  name: "show",
   initialState: {
-    showsDetail: [],
+    showDetail: [],
   },
-  reducer: {
-    addShowDetails: (state, action) => {
-      state.showsDetail = action.payload;
+  reducers: {
+    addShowDetail: (state, action) => {
+      state.showDetail.push(action.payload);
     },
   },
 });
 
-export const { addShowDetails } = showSlice.actions;
-export default showSlice.reducer;
+export default configureStore({
+  reducer: {
+    show: showSlice.reducer,
+  },
+});
+
+export const { addShowDetail } = showSlice.actions;

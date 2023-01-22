@@ -1,8 +1,8 @@
 import { useEffect, useState, useCallback } from "react";
 import { useDispatch } from "react-redux";
 import axios from "axios";
-import { addShowDetails } from "../features/shows/showSlice";
-import styles from "../css/header.module.css";
+import { addShowDetail } from "./showSlice";
+import styles from "../../css/header.module.css";
 
 const Header = () => {
   const [searchShow, setSearchShow] = useState("");
@@ -15,7 +15,7 @@ const Header = () => {
       const response = await axios.get(
         `${baseurl}search/shows?q=${searchShow}`
       );
-      dispatch(addShowDetails(response.data));
+      dispatch(addShowDetail(response.data));
     },
     [searchShow, dispatch]
   );

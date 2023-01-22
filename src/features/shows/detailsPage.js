@@ -2,9 +2,9 @@ import Header from "./header";
 import { useSelector } from "react-redux";
 
 const DetailsPage = () => {
-  const showDetailsInfo = useSelector((state) => state.showDetails.showDetail);
+  const showDetailsInfo = useSelector((state) => state.showDetail);
 
-  console.log(showDetailsInfo);
+  console.log("showDetailsInfo", showDetailsInfo);
 
   return (
     <>
