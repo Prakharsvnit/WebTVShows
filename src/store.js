@@ -1,5 +1,5 @@
 import { configureStore } from "@reduxjs/toolkit";
-import showReducer from "../features/shows/showSlice";
+import showReducer from "./showSlice";
 
 export default configureStore({
   reducer: {

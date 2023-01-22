@@ -1,6 +1,5 @@
-import { configureStore, createSlice } from "@reduxjs/toolkit";
+import { createSlice } from "@reduxjs/toolkit";
 
-// create our slice
 const showSlice = createSlice({
   name: "show",
   initialState: {
@@ -13,10 +12,5 @@ const showSlice = createSlice({
   },
 });
 
-export default configureStore({
-  reducer: {
-    show: showSlice.reducer,
-  },
-});
-
 export const { addShowDetail } = showSlice.actions;
+export default showSlice.reducer;

@@ -2,7 +2,7 @@ import { useEffect, useState, useCallback } from "react";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
-import { addShowDetail } from "../features/shows/showSlice";
+import { addShowDetail } from "../showSlice";
 import styles from "../css/header.module.css";
 
 const Header = () => {
