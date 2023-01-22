@@ -1,12 +1,14 @@
 import { useEffect, useState, useCallback } from "react";
 import { useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
 import axios from "axios";
-import { addShowDetail } from "./showSlice";
-import styles from "../../css/header.module.css";
+import { addShowDetail } from "../features/shows/showSlice";
+import styles from "../css/header.module.css";
 
 const Header = () => {
   const [searchShow, setSearchShow] = useState("");
   const dispatch = useDispatch();
+  const navigate = useNavigate();
   const baseurl = "http://api.tvmaze.com/";
 
   const fetchShowDetails = useCallback(
@@ -15,9 +17,12 @@ const Header = () => {
       const response = await axios.get(
         `${baseurl}search/shows?q=${searchShow}`
       );
-      dispatch(addShowDetail(response.data));
+      if (response) {
+        dispatch(addShowDetail(response.data));
+        navigate("/showsDetail");
+      }
     },
-    [searchShow, dispatch]
+    [searchShow, dispatch, navigate]
   );
 
   useEffect(() => {

@@ -1,0 +1,18 @@
+.detailImg{
+    object-fit: contain;
+    height:500px;
+    width:500px;
+}
+
+.showDetailBox{
+    display: flex;
+}
+
+.showName{
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.showHistory{
+    font-size: 20px;
+}
