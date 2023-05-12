@@ -13,15 +13,15 @@ const Header = () => {
 
   const fetchShowDetails = useCallback(
     async (event) => {
-      if(event){
+      if (event) {
         event.preventDefault();
-      }
-      const response = await axios.get(
-        `${baseurl}search/shows?q=${searchShow}`
-      );
-      if (response) {
-        dispatch(addShowDetail(response.data));
-        navigate("/showsDetail");
+        const response = await axios.get(
+          `${baseurl}search/shows?q=${searchShow}`
+        );
+        if (response) {
+          dispatch(addShowDetail(response.data));
+          navigate("/showsDetail");
+        }
       }
     },
     [searchShow, dispatch, navigate]
