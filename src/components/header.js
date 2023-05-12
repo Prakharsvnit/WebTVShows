@@ -13,7 +13,9 @@ const Header = () => {
 
   const fetchShowDetails = useCallback(
     async (event) => {
-      event.preventDefault();
+      if(event){
+        event.preventDefault();
+      }
       const response = await axios.get(
         `${baseurl}search/shows?q=${searchShow}`
       );
