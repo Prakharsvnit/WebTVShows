@@ -9,7 +9,7 @@ const Header = () => {
   const [searchShow, setSearchShow] = useState("");
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const baseurl = "http://api.tvmaze.com/";
+  const baseurl = "https://api.tvmaze.com/";
 
   const fetchShowDetails = useCallback(
     async (event) => {
